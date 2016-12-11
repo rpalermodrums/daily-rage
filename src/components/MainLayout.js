@@ -8,6 +8,8 @@ import {
   NavItem,
 } from 'react-bootstrap';
 
+import MainLayoutFooter from './MainLayoutFooter';
+
 @autobind
 class MainLayout extends Component {
   render () {
@@ -20,13 +22,14 @@ class MainLayout extends Component {
             </Navbar.Brand>
           </Navbar.Header>
           <Nav>
-            <NavItem eventKey={1} href="#">Link</NavItem>
+            <NavItem eventKey={1} href="/about"><Link to='/about'>About</Link></NavItem>
             <NavItem eventKey={2} href="#">Link</NavItem>
           </Nav>
         </Navbar>
         <div style={{paddingTop: '50px'}}>
           {this.props.children}
         </div>
+        <MainLayoutFooter/>
       </div>
     )
   }

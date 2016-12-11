@@ -10,7 +10,7 @@ class ArticleBody extends Component {
       <div style={{paddingTop: '30px'}}>
         {bodyText.split(/\n/).map((paragraph) => {
           return (
-            <Row key={paragraph}>{paragraph}</Row>
+            <Row key={paragraph}><p>{paragraph}</p></Row>
           )
         })}
       </div>
